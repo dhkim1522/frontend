@@ -11,6 +11,7 @@
 
 <script>
     import {reactive} from '@vue/reactivity';
+    //import axios from "axios";
 
     export default {
         setup() {
@@ -24,7 +25,13 @@
                 console.log(state.data);
             };
 
-            return {state, add};
+        /* axios
+            .get("/api/memos")
+            .then((res) => {
+                console.log(res);
+            });
+
+            return {state, add}; */
         }
 
     }

@@ -1,17 +1,17 @@
 <template>
   <div class="ground">
-    <Header></Header>
+    <MemoHeader></MemoHeader>
     <Memo></Memo>
-    <Footer></Footer>
+    <MemoFooter></MemoFooter>
   </div>
 </template>
 
 <script>
-import Header from './Header.vue'
-import Footer from './Footer.vue'
+import MemoHeader from './Header.vue'
+import MemoFooter from './Footer.vue'
 import Memo from './Memo.vue'
 
 export default {
-  components:{ Header, Footer, Memo }
+  components:{ MemoHeader, MemoFooter, Memo }
 }
 </script>

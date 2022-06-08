@@ -1,7 +1,7 @@
 //const { defineConfig } = require('@vue/cli-service')
 
 // CORS 이슈 ( proxy 우회 )
-/* module.exports = {
+module.exports = {
   devServer:{
     proxy:{
       "/api":{
@@ -9,7 +9,7 @@
       }
     }
   }
-}  */
+}
 
 /* module.exports = defineConfig({
   transpileDependencies: true,

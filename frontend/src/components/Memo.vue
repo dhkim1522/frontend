@@ -11,27 +11,31 @@
 
 <script>
     import {reactive} from '@vue/reactivity';
-    //import axios from "axios";
+    import axios from "axios";
 
     export default {
         setup() {
 
-            const state = reactive({data: []})
+            const state = reactive({
+                data: ["메모1 내용", "메모2 내용", "메모3 내용"]
+                });
 
             const add = () => {
-                state
-                    .data
-                    .push("추가된 메모 내용");
-                console.log(state.data);
+
+                const content = prompt("내용을 입력해주세요.");
+                
+                axios.post("/api/memos", {content}).then(res => {
+                    state.data = res.data;
+                })
             };
 
-        /* axios
-            .get("/api/memos")
-            .then((res) => {
-                console.log(res);
-            });
+            axios
+                .get("/api/memos")
+                .then(res => {
+                    console.log(res);
+                });
 
-            return {state, add}; */
+            return {state, add}; 
         }
 
     }

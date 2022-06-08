@@ -1,6 +1,8 @@
 <template>
-  <div class="app"></div>
-  <Ground></Ground>
+  <div>
+    <div class="app"></div>
+    <Ground></Ground>
+  </div>
 </template>
 
 <script>
